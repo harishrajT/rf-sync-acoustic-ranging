@@ -39,6 +39,9 @@ Sound travels only ~0.343 mm per µs, so every microsecond of timing error matte
 
 Pin connections: [docs/wiring.md](docs/wiring.md)
 
+## Outcome
+The prototype **did not reach its target distance accuracy**. The RF link itself was a precise time reference (≈ 679 µs latency, ±16 µs spread). The problem was millisecond-level delay and jitter between the RF trigger and the tone detection. Sound travels only about 34 cm per millisecond, so this jitter was larger than the 15 cm difference we were trying to measure. Timing on the acoustic detection side is the limit a next version has to fix (see *Limitations & future work*).
+
 ## Results
 
 ### 1. RF sync latency
